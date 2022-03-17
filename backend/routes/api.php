@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TaskManagerController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +19,23 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::name("task-manager.")->prefix("task-manager")->controller(TaskManagerController::class)->group(function () {
-
+Route::name("task-manager.")
+    ->prefix("task-manager/task")
+    ->controller(TaskController::class)
+    ->group(function () {
+        
     Route::get("/", "getAllTasks")
         ->name("get-all");
-    
+
     Route::get("/{id}", "getTaskById")
         ->name("get-by-id");
-    
+
     Route::post("/", "createTask")
         ->name("create");
-    
+
     Route::patch("/{id}", "updateTaskById")
         ->name("update-by-id");
-    
+
     Route::delete("/{id}", "deleteTaskById")
         ->name("delete-by-id");
-
 });
