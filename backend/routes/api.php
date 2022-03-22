@@ -33,7 +33,7 @@ Route::name("task-manager.")
     Route::post("/", "createTask")
         ->name("create");
 
-    Route::patch("/{id}", "updateTaskById")
+    Route::put("/{id}", "updateTaskById")
         ->name("update-by-id");
 
     Route::delete("/{id}", "deleteTaskById")
