@@ -1,10 +1,3 @@
-# Task Manager
-- This application is a simulation of [Google Keep](https://keep.google.com).
-
-- It is divided into two parts: Fontend and Backend.
-
-
----
 # Backend
 The backend consists of a rest api. Supported languages are Brazilian Portuguese and English.
 
@@ -53,7 +46,3 @@ PUT
 DELETE
 /api/task-manager/task/1
 ```
-
-
----
-# Frontend
