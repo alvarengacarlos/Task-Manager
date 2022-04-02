@@ -5,5 +5,8 @@
 # Backend
 __[Click here](backend/README.md)__ for backend documentation.
 
+# Frontend
+__[Click here](frontend/README.md)__ for frontend documentation.
+
 # License
 This application is under [MIT License](LICENSE).
